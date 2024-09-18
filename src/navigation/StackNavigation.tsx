@@ -11,7 +11,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import LoginScreen from '@feature/login/LoginScreen';
+// import LoginScreen from '@feature/login/LoginScreen';
 import {screenPath} from '@common/constants/screenPath';
 import TabNavigation from '@navigation/TabNavigation';
 import {IRunRecord} from '@api/run/interface/run.interface';
@@ -34,8 +34,9 @@ export type RootStackParamList = {
  */
 const StackNavigation = () => {
   const Stack = createStackNavigator<RootStackParamList>();
-  const pathName = screenPath.feature;
+  // const pathName = screenPath.feature;
   const navigationName = screenPath.navigation;
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -43,10 +44,10 @@ const StackNavigation = () => {
           headerShown: false,
         }}>
         {/* 로그인 스크린 */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name={pathName.login as keyof RootStackParamList}
           component={LoginScreen}
-        />
+        /> */}
         <Stack.Screen
           name={navigationName.tab as keyof RootStackParamList}
           component={TabNavigation}

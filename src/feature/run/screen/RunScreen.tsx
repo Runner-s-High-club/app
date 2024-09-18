@@ -12,9 +12,7 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import styled from '@emotion/native';
 import NaverMapView, {Marker} from 'react-native-nmap';
-import useDevicePermissions, {TPermission} from '@hooks/useDevicePermissions';
 import Geolocation from '@react-native-community/geolocation';
-import services from '@common/constants/services';
 import {
   AppState,
   AppStateStatus,
@@ -24,8 +22,10 @@ import {
   TextInputChangeEventData,
   ViewStyle,
 } from 'react-native';
-import Bottomsheet from '@common/components/bottomsheet/Bottomsheet';
 import {BottomSheetModal} from '@gorhom/bottom-sheet';
+
+import services from '@common/constants/services';
+import useDevicePermissions, {TPermission} from '@hooks/useDevicePermissions';
 import EditKmItem from '@feature/run/components/EditKmItem';
 import RunButtonGroup from '@feature/run/components/RunButtonGroup';
 import PrepareRun from '@feature/run/components/PrepareRun';
@@ -35,6 +35,7 @@ import navigationSlice from '@navigation/slice/navigation.slice';
 import CompleteRun from '@feature/run/components/CompleteRun';
 import {colors} from '@common/styles/theme';
 import commonSlice from '@common/slice/common.slice';
+import {Bottomsheet} from '@/common/components/atoms';
 
 /**
  * 달리기 측정 화면

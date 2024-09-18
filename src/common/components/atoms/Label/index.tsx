@@ -11,11 +11,7 @@
 
 import styled from '@emotion/native';
 import React from 'react';
-
-interface ILabel {
-  text: string;
-  style?: object;
-}
+import {ILabel} from '@common/components/atoms/Label/interface/label.interface';
 
 /**
  * label 컴포넌트

@@ -12,12 +12,7 @@
 import React, {useMemo} from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
 
-interface SpaceProps {
-  top?: number;
-  right?: number;
-  left?: number;
-  bottom?: number;
-}
+import {SpaceProps} from '@common/components/atoms/Space/interface/space.interface';
 
 /**
  * 컴포넌트 사이에 마진 공백을 만들어주는 요소

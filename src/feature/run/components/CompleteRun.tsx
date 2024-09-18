@@ -9,13 +9,14 @@
 // Copyright (C) 2024 JHS All rights reserved.
 // =============================================================================
 
-import ButtonCommon from '@common/components/button/ButtonCommon';
-import {RootState} from '@redux/store/store';
-import styled from '@emotion/native';
 import React, {useMemo} from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
-import NaverMapView, {Marker, Path} from 'react-native-nmap';
 import {useSelector} from 'react-redux';
+import styled from '@emotion/native';
+
+import NaverMapView, {Marker, Path} from 'react-native-nmap';
+import {RootState} from '@redux/store/store';
+import {Button} from '@common/components/atoms';
 
 interface ICompleteRun {
   pathPosition: {
@@ -140,9 +141,9 @@ const CompleteRun = ({pathPosition, runCompleteController}: ICompleteRun) => {
         </NaverMapView>
       </LayerView>
       <BottomButtonView>
-        <ButtonCommon onPress={runCompleteController}>
+        <Button onPress={runCompleteController}>
           <ButtonLabel>완료</ButtonLabel>
-        </ButtonCommon>
+        </Button>
       </BottomButtonView>
     </Wrapper>
   );

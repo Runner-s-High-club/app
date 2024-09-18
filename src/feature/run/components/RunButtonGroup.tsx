@@ -9,10 +9,8 @@
 // Copyright (C) 2024 JHS All rights reserved.
 // =============================================================================
 
-import styled from '@emotion/native';
 import React, {useEffect, useMemo, useState} from 'react';
-import CircleButton from '@common/components/button/CircleButton';
-import SvgIcon from '@common/components/icon/SvgIcon';
+import styled from '@emotion/native';
 import Animated, {
   Easing,
   useAnimatedStyle,
@@ -22,8 +20,10 @@ import Animated, {
 } from 'react-native-reanimated';
 import {Alert} from 'react-native';
 import {useDispatch} from 'react-redux';
+
 import navigationSlice from '@navigation/slice/navigation.slice';
-import {colors} from '@/common/styles/theme';
+import {colors} from '@common/styles/theme';
+import {CircleButton, SvgIcon} from '@common/components/atoms';
 
 interface IRunButtonGroup {
   startRunHandler: () => void;

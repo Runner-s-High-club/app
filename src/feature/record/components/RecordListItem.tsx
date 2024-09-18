@@ -9,17 +9,17 @@
 // Copyright (C) 2024 JHS All rights reserved.
 // =============================================================================
 
-import {RootTabParamList} from '@navigation/TabNavigation';
-import ButtonCommon from '@common/components/button/ButtonCommon';
-import SvgIcon from '@common/components/icon/SvgIcon';
+import React from 'react';
 import styled from '@emotion/native';
+import {ViewToken} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {StackScreenProps} from '@react-navigation/stack';
-import React from 'react';
-import {ViewToken} from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
-import {colors} from '@common/styles/theme';
+
 import {IRunRecord} from '@api/run/interface/run.interface';
+import {RootTabParamList} from '@navigation/TabNavigation';
+import {colors} from '@common/styles/theme';
+import {Button, SvgIcon} from '@common/components/atoms';
 
 interface IRecordListItem {
   viewItems: Animated.SharedValue<ViewToken[]>;
@@ -158,7 +158,7 @@ const RecordTextUnit = styled.Text`
   margin-top: 2px;
 `;
 
-const ArrowButton = styled(ButtonCommon)`
+const ArrowButton = styled(Button)`
   height: 30px;
   position: absolute;
   top: -2px;

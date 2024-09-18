@@ -23,7 +23,6 @@ import healthPermissions from '@common/constants/healthPermissions';
 import {useSharedValue} from 'react-native-reanimated';
 import RecordListItem from '@feature/record/components/RecordListItem';
 import {mockupData} from '@feature/record/mockup/recordMockup';
-
 import {IRunRecord} from '@api/run/interface/run.interface';
 
 /**
@@ -45,7 +44,7 @@ const RecordScreen = () => {
   useEffect(() => {
     const handleAppStateChange = (nextAppState: AppStateStatus) => {
       if (nextAppState === 'active') {
-        console.log(`백그라운드에서 돌아옴 :`, nextAppState);
+        console.log('백그라운드에서 돌아옴 :', nextAppState);
         healthPermissionController.getPermissionAuthStatus(healthPermissions);
       }
     };

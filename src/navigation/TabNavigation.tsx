@@ -13,15 +13,15 @@ import React, {useMemo} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {screenPath} from '@common/constants/screenPath';
 import RunScreen from '@/feature/run/screen/RunScreen';
-import SvgIcon from '@common/components/icon/SvgIcon';
-import Label from '@common/components/label/Label';
-import * as Icons from '@common/components/icon/index';
+
 import HeaderButton from '@navigation/components/HeaderButton';
 import {useSelector} from 'react-redux';
 import {RootState} from '@redux/store/store';
 import RecordStack from '@navigation/stack/record/RecordStack';
 import {colors} from '@common/styles/theme';
 import {IRunRecord} from '@api/run/interface/run.interface';
+import {Label, SvgIcon} from '@common/components/atoms';
+import * as Icons from '@common/constants/icons';
 
 export type RootTabParamList = {
   run: undefined;
@@ -76,7 +76,8 @@ const TabNavigation = () => {
 
   return (
     <Tab.Navigator
-      initialRouteName={pathName.run as keyof RootTabParamList}
+      // initialRouteName={pathName.run as keyof RootTabParamList}
+      initialRouteName={'recordStack'}
       screenOptions={({}) => ({
         headerShown: isTabShowStatus,
         tabBarAllowFontScaling: false,

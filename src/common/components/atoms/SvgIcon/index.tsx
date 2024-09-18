@@ -10,13 +10,9 @@
 // =============================================================================
 
 import React from 'react';
-import {SvgProps} from 'react-native-svg';
-import * as Icons from '.';
 
-export type IconProps = SvgProps & {
-  name: keyof typeof Icons;
-  size?: number;
-};
+import * as Icons from '@common/constants/icons';
+import {IconProps} from '@common/components/atoms/SvgIcon/interface/svgIcon.interface';
 
 /**
  *  svg 아이콘 컴포넌트
